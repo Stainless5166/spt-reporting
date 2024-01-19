@@ -1,0 +1,4 @@
+PyQt5==5.15.10
+pytest~=7.4.4
+pytest-qt==4.3.1
+pyinstaller==6.3.0
