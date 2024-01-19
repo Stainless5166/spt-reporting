@@ -1,0 +1,53 @@
+version: 1
+AppDir:
+  path: /home/williamh/PycharmProjects/spt-reporting/AppDir
+  app_info:
+    id: im.number53.spt-reporting
+    name: SPT-Reporting
+    icon: appicon.png
+    version: latest
+    exec: usr/bin/main
+    exec_args: "$@"
+  pacman:
+    include:
+        - python
+        - python-pip
+        - python-pyqt5
+    exclude: []
+  files:
+    include: []
+    exclude:
+    - usr/share/man
+    - usr/share/doc/*/README.*
+    - usr/share/doc/*/changelog.*
+    - usr/share/doc/*/NEWS.*
+    - usr/share/doc/*/TODO.*
+  test:
+    fedora-30:
+      image: appimagecrafters/tests-env:fedora-30
+      command: ./AppRun
+    debian-stable:
+      image: appimagecrafters/tests-env:debian-stable
+      command: ./AppRun
+    archlinux-latest:
+      image: appimagecrafters/tests-env:archlinux-latest
+      command: ./AppRun
+    centos-7:
+      image: appimagecrafters/tests-env:centos-7
+      command: ./AppRun
+    ubuntu-xenial:
+      image: appimagecrafters/tests-env:ubuntu-xenial
+      command: ./AppRun
+AppImage:
+  arch: x86_64
+  update-information: guess
+script:
+  - rm -rf AppDir  | true
+  - mkdir -p AppDir/usr/src
+  - cp main.py  AppDir/usr/src -r
+  - python3 -m pip install --system --ignore-installed --prefix=/usr --root=AppDir -r ./requirements.txt
+  - pyinstaller --onefile --name=main --distpath=AppDir/usr/bin app/main.py
+runtime:
+  env:
+    PYTHONHOME: '${APPDIR}/usr'
+    PYTHONPATH: '${APPDIR}/usr/lib/python3.6/site-packages'

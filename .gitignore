@@ -79,5 +79,10 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# AppImage
+# AppDir
 *.AppImage
+AppDir/*
+*.gpg
+appimage-build
+
+*.spec
