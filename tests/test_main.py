@@ -1,5 +1,4 @@
 import pytest
-
 from app.main import YourMainWindowClass
 
 
@@ -21,3 +20,8 @@ def test_open_close_window(main_window, qtbot):
 def test_start_stop_program(main_window):
     assert main_window.start_program()
     assert main_window.stop_program()
+
+
+# Load a configuration file if available
+def test_load_config_file_if_available():
+    pass

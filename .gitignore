@@ -86,3 +86,5 @@ AppDir/*
 appimage-build
 
 *.spec
+
+test_report.txt
