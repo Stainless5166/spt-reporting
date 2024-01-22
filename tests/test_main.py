@@ -1,5 +1,5 @@
 import pytest
-from app.main import YourMainWindowClass
+from app.ui.main_controller import YourMainWindowClass
 
 
 @pytest.fixture
