@@ -7,3 +7,5 @@ flake8==3.9.2
 appimage-builder==1.1.0
 jinja2==3.0.1
 weasyprint==53.2
+dynaconf==3.2.1
+

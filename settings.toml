@@ -1,0 +1,6 @@
+[default]
+# Define the debug mode (boolean value)
+DEBUG = true
+
+# Define the directory for data (string value)
+DATA_DIR = "{env:HOME}/Documents/CPT-Reports/.data"
