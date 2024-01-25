@@ -88,3 +88,4 @@ appimage-build
 *.spec
 
 test_report.txt
+/{env:HOME}/
