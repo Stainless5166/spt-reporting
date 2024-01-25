@@ -31,7 +31,9 @@ classDiagram
         +String Email
         +String Phone
         +String Insurance
-        +createPatientID()
+        +create_patient_id()
+        +request_patient_info()
+        +update_patient_info()
     }
     class TestSetSelector {
         +loadTestSets()

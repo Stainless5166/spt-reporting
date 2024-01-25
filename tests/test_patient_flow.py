@@ -1,11 +1,14 @@
 import os.path
 import pytest
 import shutil
+import logging
 
-from app.new_patient_form import Patient
+from app.patient import Patient
 from app.main import settings
 
 test_dir = "/tmp/data"
+
+logger = logging.getLogger(__name__)
 
 
 @pytest.fixture
@@ -17,7 +20,7 @@ def patient():
     try:
         shutil.rmtree(test_dir)
     except OSError as e:
-        print("Error: %s : %s" % ("data", e.strerror))
+        logger.debug("Error: %s : %s" % (test_dir, e.strerror))
 
 
 class TestNewPatientForm:
@@ -46,7 +49,7 @@ class TestNewPatientForm:
         """
 
         good_path = settings.DATA_DIR + "/" + patient.patient_id
-        print(good_path)
+        logger.debug(good_path)
 
         # check that the file does not already exist
         assert os.path.exists(good_path) is False

@@ -1,0 +1,44 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    width: 595px;  /* A4 width in points */
+    height: 842px;  /* A4 height in points */
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-size: 10px;
+    /* Use flexbox for layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Specify a monospace font */
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
