@@ -1,5 +1,10 @@
 import os
 import errno
+import logging
+
+# import logging, create a new logger and then disable
+# everything but passing up to the root logger
+logger = logging.getLogger(__name__)
 
 
 def safe_file_write(path, data):
@@ -13,7 +18,7 @@ def safe_file_write(path, data):
             if e.errno != errno.EEXIST:
                 pass
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
+            logger.error(f"An unexpected error occurred: {e}")
             pass
 
     # Try to open the file in write mode, creating it if it doesn't exist
@@ -23,11 +28,11 @@ def safe_file_write(path, data):
     except IOError as e:
         # Handle expected IO errors
         # (like file write permissions, disk full, etc.)
-        print(f"An IO error occurred: {e}")
+        logger.error(f"An IO error occurred: {e}")
         raise
     except Exception as e:
         # Handle any other unexpected errors
-        print(f"An unexpected error occurred: {e}")
+        logger.error(f"An unexpected error occurred: {e}")
         raise
 
 # Example usage

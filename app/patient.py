@@ -1,6 +1,8 @@
 import uuid
 import json
-from app.main import settings
+from pydantic import BaseModel
+from typing import Optional
+from app.main import settings, logger
 from app.safe_write import safe_file_write
 
 
@@ -13,39 +15,13 @@ def create_patient_id():
     return uuid.uuid4()
 
 
-class Person:
-    demographics = {
-        "name": "Name",
-        "address": "Address",
-        "dob": "Date of Birth",
-        "email": "Email",
-        "phone": "Phone",
-        "insurance": "Insurance"
-    }
-
-    def __init__(self, name: str, address: str,
-                 dob: str, email: str, phone: str,
-                 insurance: str):
-        self.demographics["name"] = name
-        self.demographics["address"] = address
-        self.demographics["dob"] = dob
-        self.demographics["email"] = email
-        self.demographics["phone"] = phone
-        self.demographics["insurance"] = insurance
-
-    # Function to convert object to json returns a string.
-
-    def to_json(self) -> str:
-        return json.dumps(self.demographics)
-
-    def get_info(self):
-        return {k: (v, type(v).__name__)
-                for k, v in self.demographics.items()}
-
-    # Function to save data from a Qt widget callback
-    def save_data(self, data):
-        for k, v in data.items():
-            self.demographics[k] = v
+class Person(BaseModel):
+    name: Optional[str] = None
+    address: Optional[str] = None
+    dob: Optional[str] = None
+    email: Optional[str] = None
+    phone: Optional[str] = None
+    insurance: Optional[str] = None
 
 
 class Patient:
@@ -57,8 +33,7 @@ class Patient:
         # when no filename supplied, create a new person
         if not person_data_filename:
             self.patient_id = create_patient_id()
-            self.person = Person(None, None, None,
-                                 None, None, None)
+            self.person = Person()
         else:
             # try to load the person data from the file
             try:
@@ -68,12 +43,12 @@ class Patient:
                     # data from the file
                     self.patient_id = data.get('patient_id')
                     self.person = Person(
-                        data.get('name'),
-                        data.get('address'),
-                        data.get('dob'),
-                        data.get('email'),
-                        data.get('phone'),
-                        data.get('insurance')
+                        name=data.name,
+                        address=data.address,
+                        dob=data.dob,
+                        email=data.email,
+                        phone=data.phone,
+                        insurance=data.insurance,
                     )
             except Exception as e:
                 raise ValueError('Unable to load data from the file. '
@@ -86,13 +61,13 @@ class Patient:
         data_dir = settings.DATA_DIR
         file_name = self.patient_id
         file_path = data_dir + "/" + file_name
-        print(file_path)
+        logger.debug(file_path)
         try:
-            safe_file_write(file_path, self.person.to_json())
+            safe_file_write(file_path, self.person.json())
         except IOError:
-            print("Error: File does not appear to exist.")
+            logger.debug("Error: File does not appear to exist.")
         except Exception as e:
-            print("Error: %s : %s" % ("data", e.strerror))
+            logger.debug("Error: %s : %s" % ("data", e.strerror))
 
     def request_patient_info(self):
         """

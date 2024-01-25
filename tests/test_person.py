@@ -12,14 +12,21 @@ def test_person_initialization():
     phone = '123-456-7890'
     insurance = 'XYZ123'
 
-    person = Person(name, address, dob, email, phone, insurance)
+    person = Person(
+        name=name,
+        address=address,
+        dob=dob,
+        email=email,
+        phone=phone,
+        insurance=insurance
+    )
 
-    assert person.demographics["name"] == name
-    assert person.demographics["address"] == address
-    assert person.demographics["dob"] == dob
-    assert person.demographics["email"] == email
-    assert person.demographics["phone"] == phone
-    assert person.demographics["insurance"] == insurance
+    assert person.name == name
+    assert person.address == address
+    assert person.dob == dob
+    assert person.email == email
+    assert person.phone == phone
+    assert person.insurance == insurance
 
 
 def test_person_to_dict():
@@ -30,9 +37,16 @@ def test_person_to_dict():
     phone = '123-456-7890'
     insurance = 'XYZ123'
 
-    person = Person(name, address, dob, email, phone, insurance)
+    person = Person(
+        name=name,
+        address=address,
+        dob=dob,
+        email=email,
+        phone=phone,
+        insurance=insurance
+    )
     # use person.json() to convert to json
-    person_dict = person.to_json()
+    person_dict = person.json()
 
     assert person_dict == json.dumps({
         'name': name,
@@ -52,7 +66,15 @@ def test_person_save_data():
     phone = '123-456-7890'
     insurance = 'XYZ123'
 
-    person = Person(name, address, dob, email, phone, insurance)
+    person = Person(
+        name=name,
+        address=address,
+        dob=dob,
+        email=email,
+        phone=phone,
+        insurance=insurance
+    )
+
     new_data = {
         'name': 'Jane Doe',
         'address': '456 Pine St',
@@ -62,11 +84,11 @@ def test_person_save_data():
         'insurance': 'ABC987'
     }
 
-    person.save_data(new_data)
+    person = Person(**new_data)
 
-    assert person.demographics['name'] == new_data['name']
-    assert person.demographics['address'] == new_data['address']
-    assert person.demographics['dob'] == new_data['dob']
-    assert person.demographics['email'] == new_data['email']
-    assert person.demographics['phone'] == new_data['phone']
-    assert person.demographics['insurance'] == new_data['insurance']
+    assert person.name == new_data['name']
+    assert person.address == new_data['address']
+    assert person.dob == new_data['dob']
+    assert person.email == new_data['email']
+    assert person.phone == new_data['phone']
+    assert person.insurance == new_data['insurance']

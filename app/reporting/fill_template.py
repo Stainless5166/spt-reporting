@@ -1,7 +1,14 @@
 from jinja2 import Environment, FileSystemLoader
+from pydantic import BaseModel
+
+
+class ExamplePydanticModel(BaseModel):
+    var1: str
+    var2: int
+
 
 env = Environment(loader=FileSystemLoader('.'))
-template = env.get_template("template_report.html")
+template = env.get_template("templates/template_report.html")
 
 data = {
     "title": "My Report Title",
@@ -17,5 +24,5 @@ data = {
 
 output = template.render(data)
 
-with open("output.html", "w") as f:
+with open("build/output.html", "w") as f:
     f.write(output)

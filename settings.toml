@@ -4,3 +4,10 @@ DEBUG = true
 
 # Define the directory for data (string value)
 DATA_DIR = "{env:HOME}/Documents/CPT-Reports/.data"
+
+# Define the directory for reports (string value)
+REPORT_DIR = "{env:HOME}/Documents/CPT-Reports/.reports"
+
+# Define the directory for logs (string value)
+LOG_DIR = "{env:HOME}/Documents/CPT-Reports/.logs"
+LOG_FILE = "{env:HOME}/Documents/CPT-Reports/.logs/cpt-reports.log"
