@@ -2,7 +2,7 @@ import uuid
 import json
 from pydantic import BaseModel
 from typing import Optional
-from app.main import SETTINGS
+from spt_reporting import SETTINGS
 from app.safe_write import safe_file_write
 import logging
 

@@ -4,7 +4,7 @@ import shutil
 import logging
 
 from app.patient import Patient
-from app.main import SETTINGS
+from spt_reporting import SETTINGS
 
 test_dir = "/tmp/data"
 
