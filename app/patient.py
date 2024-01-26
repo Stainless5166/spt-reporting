@@ -2,8 +2,11 @@ import uuid
 import json
 from pydantic import BaseModel
 from typing import Optional
-from app.main import settings, logger
+from app.main import SETTINGS
 from app.safe_write import safe_file_write
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 # create and manage a new patient record
@@ -58,7 +61,7 @@ class Patient:
         """
         Export patient data as json
         """
-        data_dir = settings.DATA_DIR
+        data_dir = SETTINGS.DATA_DIR
         file_name = self.patient_id
         file_path = data_dir + "/" + file_name
         logger.debug(file_path)
@@ -78,9 +81,12 @@ class Patient:
         """
         # TODO: Implement method to request patient information
 
-    def update_patient_info(self):
+    def update_patient_info(self, person: Person = None, test=None):
         """
         Method to update patient information based on a callback
         from a Qt widget
         """
+        # update the self.person object with the data from the
+        # person object passed to the method
+        self.person = person
         # TODO: Implement method to return patient information

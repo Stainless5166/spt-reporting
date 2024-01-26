@@ -22,9 +22,9 @@
     <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
-      <widget class="QWidget" name="home">
+      <widget class="QWidget" name="Home">
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="2">
          <widget class="QFrame" name="frame">
@@ -181,7 +181,10 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="start_test_2">
+      <widget class="QWidget" name="RecordResults"/>
+      <widget class="QWidget" name="Save"/>
+      <widget class="QWidget" name="Print"/>
+      <widget class="QWidget" name="StartTest">
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="4" column="1">
          <widget class="QLabel" name="histomine">

@@ -1,0 +1,9 @@
+{
+  "default": {
+    "DEBUG": true,
+    "DATA_DIR": "{env:HOME}/Documents/CPT-Reports/.data",
+    "REPORT_DIR": "{env:HOME}/Documents/CPT-Reports/.reports",
+    "LOG_DIR": "{env:HOME}/Documents/CPT-Reports/.logs",
+    "LOG_FILE": "{env:HOME}/Documents/CPT-Reports/.logs/cpt-reports.log"
+  }
+}

@@ -1,4 +1,9 @@
 from PyQt5 import QtWidgets, uic
+import logging
+
+from app.ui.stack_controller import StackController
+
+logger = logging.getLogger(__name__)
 
 
 class YourMainWindowClass(QtWidgets.QMainWindow):
@@ -7,11 +12,15 @@ class YourMainWindowClass(QtWidgets.QMainWindow):
         uic.loadUi("app/ui/main.ui", self)
         self.setWindowTitle("SPT - Reporting")
         self.apply_actions_to_buttons()
-        self.back_stack = []
+        self.stack_controller = StackController(self.stackedWidget)
 
     def start_program(self):
         self.show()
-        self.stack_controller("Home")
+        self.stack_controller.current_state = "Home"
+        # Following line is used to mimic the functionality of
+        # `self.stackedWidget.setCurrentIndex(stack_map[stack])` statement
+        # from the previous `stack_controller` method.
+        self.stackedWidget.setCurrentIndex(self.stack_controller.current_state)
         return True
 
     def apply_actions_to_buttons(self):
@@ -21,19 +30,6 @@ class YourMainWindowClass(QtWidgets.QMainWindow):
 
     def button_controller(self):
         print("Button pressed" + self.sender().objectName())
-
-    # This is the function that controls the stack of the
-    # main window as a state machine.
-    def stack_controller(self, stack: str):
-        # map stack to index
-        stack_map = {
-            "Home": 0,
-            "StartTest": 1,
-            "RecordResults": 2,
-            "Save": 3,
-            "Print": 4,
-        }
-        self.stackedWidget.setCurrentIndex(stack_map[stack])
 
     def stop_program(self):
         self.hide()

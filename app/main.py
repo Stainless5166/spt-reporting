@@ -1,40 +1,55 @@
 import sys
-import os
 import logging
+import logging.config
 from PyQt5 import QtWidgets
-from app.ui.main_controller import YourMainWindowClass
-
 from dynaconf import Dynaconf
 
-settings = Dynaconf(
+SETTINGS = Dynaconf(
     environments=True,
-    settings_files=['settings.toml', '.secrets.toml']
+    settings_files=['settings.json'],
 )
 
-logger_path = settings.LOG_FILE
-logger_dir = os.path.dirname(logger_path)
-if not os.path.exists(logger_dir):
-    os.makedirs(logger_dir)
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s %(levelname)s %(message)s',
-    datefmt='%m/%d/%Y %I:%M:%S %p',
-    handlers=[
-        logging.FileHandler(settings.LOG_FILE),
-        logging.StreamHandler()
-    ]
-)
-# create logger
-logger = logging.getLogger(__name__)
+def configure_logging():
+    log_config_dict = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'standard': {
+                'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+            },
+        },
+        'handlers': {
+            'default': {
+                'class': 'logging.StreamHandler',
+                'formatter': 'standard',
+                'stream': 'ext://sys.stdout',
+            },
+            'file': {
+                'class': 'logging.FileHandler',
+                'formatter': 'standard',
+                'filename': SETTINGS.LOG_FILE,
+                'mode': 'a',
+            },
+        },
+        'root': {
+            'level': 'INFO',
+            'handlers': ['default', 'file']
+        }
+    }
+
+    logging.config.dictConfig(log_config_dict)
+    logger = logging.getLogger(__name__)
+    return logger
 
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
-    window = YourMainWindowClass()
+    window = app.ui.main_controller.YourMainWindowClass()
     window.start_program()
     sys.exit(app.exec_())
 
 
 if __name__ == "__main__":
+    configure_logging()
     main()

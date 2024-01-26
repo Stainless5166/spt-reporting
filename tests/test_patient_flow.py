@@ -4,7 +4,7 @@ import shutil
 import logging
 
 from app.patient import Patient
-from app.main import settings
+from app.main import SETTINGS
 
 test_dir = "/tmp/data"
 
@@ -40,7 +40,7 @@ class TestNewPatientForm:
         # assert patient.patient_id.is_uuid()
 
     def test_patient_json_export(self, monkeypatch, patient):
-        monkeypatch.setattr(settings, "DATA_DIR", test_dir)
+        monkeypatch.setattr(SETTINGS, "DATA_DIR", test_dir)
         """
         Test case for patient_json_export method
         test creation of file, that file does not already exist,
@@ -48,7 +48,7 @@ class TestNewPatientForm:
         and that the json export matches the patient object that is exported.
         """
 
-        good_path = settings.DATA_DIR + "/" + patient.patient_id
+        good_path = SETTINGS.DATA_DIR + "/" + patient.patient_id
         logger.debug(good_path)
 
         # check that the file does not already exist
