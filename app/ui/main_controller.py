@@ -1,6 +1,8 @@
+import os
+
 from PyQt5 import QtWidgets, uic
 import logging
-
+from dynaconf import settings
 from app.ui.stack_controller import StackController
 
 logger = logging.getLogger(__name__)
@@ -13,6 +15,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowTitle("SPT - Reporting")
         self.apply_actions_to_buttons()
         self.stack_controller = StackController(self.stackedWidget)
+        self.load_patients_for_selector()
 
     def start_program(self):
         self.show()
@@ -34,3 +37,11 @@ class MainWindow(QtWidgets.QMainWindow):
     def stop_program(self):
         self.hide()
         return True
+
+    def load_patients_for_selector(self):
+        # this method will be used to load the patients for the patient selector from the SETTINGS.DATA_DIR
+        # first pull filenames from the directory SETTINGS.DATA_DIR
+        # then create a list of patients from the filenames
+
+        filenames = os.listdir(settings.DATA_DIR)
+        logger.debug(filenames)

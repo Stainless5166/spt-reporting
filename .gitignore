@@ -89,3 +89,6 @@ appimage-build
 
 test_report.txt
 /{env:HOME}/
+
+# Ignore dynaconf secret files
+.secrets.*

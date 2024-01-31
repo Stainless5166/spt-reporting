@@ -46,9 +46,9 @@ def test_person_to_dict():
         insurance=insurance,
     )
     # use person.json() to convert to json
-    person_dict = person.json()
+    person_dict = json.loads(person.json())
 
-    assert person_dict == json.dumps(
+    assert person_dict == (
         {
             "name": name,
             "address": address,

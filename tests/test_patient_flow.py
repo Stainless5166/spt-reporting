@@ -1,12 +1,8 @@
 import os.path
 import pytest
-import shutil
 import logging
-
+from config import settings
 from app.patient import Patient
-from spt_reporting import SETTINGS
-
-test_dir = "/tmp/data"
 
 logger = logging.getLogger(__name__)
 
@@ -17,10 +13,6 @@ def patient():
     patient.patient_id = "test_patient_id"
     yield patient
     # teardown code
-    try:
-        shutil.rmtree(test_dir)
-    except OSError as e:
-        logger.debug("Error: %s : %s" % (test_dir, e.strerror))
 
 
 class TestNewPatientForm:
@@ -39,8 +31,7 @@ class TestNewPatientForm:
         # check that the patient ID is a UUID
         # assert patient.patient_id.is_uuid()
 
-    def test_patient_json_export(self, monkeypatch, patient):
-        monkeypatch.setattr(SETTINGS, "DATA_DIR", test_dir)
+    def test_patient_json_export(self, patient):
         """
         Test case for patient_json_export method
         test creation of file, that file does not already exist,
@@ -48,10 +39,12 @@ class TestNewPatientForm:
         and that the json export matches the patient object that is exported.
         """
 
-        good_path = SETTINGS.DATA_DIR + "/" + patient.patient_id
+        good_path = settings.DATA_DIR + "/" + patient.patient_id
         logger.debug(good_path)
 
-        # check that the file does not already exist
+        # check to see if file exists and remove it if it does
+        if os.path.exists(good_path):
+            os.remove(good_path)
         assert os.path.exists(good_path) is False
 
         # export patient data as json

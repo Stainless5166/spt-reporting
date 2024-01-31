@@ -2,7 +2,7 @@ import uuid
 import json
 from pydantic import BaseModel
 from typing import Optional
-from spt_reporting import SETTINGS
+from dynaconf import settings
 from app.safe_write import safe_file_write
 import logging
 
@@ -55,15 +55,13 @@ class Patient:
                         insurance=data.insurance,
                     )
             except Exception as e:
-                raise ValueError(
-                    "Unable to load data from the file. " "Error: {}".format(e)
-                )
+                raise ValueError("Unable to load data from the file. " "Error: {}".format(e))
 
     def patient_json_export(self):
         """
         Export patient data as json
         """
-        data_dir = SETTINGS.DATA_DIR
+        data_dir = settings.DATA_DIR
         file_name = self.patient_id
         file_path = data_dir + "/" + file_name
         logger.debug(file_path)

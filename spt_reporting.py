@@ -1,15 +1,12 @@
+#!/usr/bin/env python3
+import os
 import sys
 import json
 import logging
 import logging.config
 from PyQt5 import QtWidgets
-from dynaconf import Dynaconf
+from config import settings
 from app.ui.main_controller import MainWindow
-
-SETTINGS = Dynaconf(
-    environments=True,
-    settings_files=["settings.json"],
-)
 
 
 class JsonFormatter(logging.Formatter):
@@ -36,18 +33,36 @@ def configure_logging():
                 "stream": "ext://sys.stdout",
             },
             "file": {
-                "class": "logging.FileHandler",
+                "class": "logging.handlers.RotatingFileHandler",
                 "formatter": "json",
-                "filename": SETTINGS.LOG_FILE,
+                "filename": settings.LOG_DIR + "/spt_reporting.log",
                 "mode": "a",
+                "maxBytes": 1024 * 1024 * 10,  # 10 MB,
+                "backupCount": 10,
+                "encoding": "utf8",
             },
         },
-        "root": {"level": "DEBUG", "handlers": ["default", "file"]},
+        "root": {"level": settings.LOG_LEVEL, "handlers": ["default", "file"]},
     }
 
     logging.config.dictConfig(log_config_dict)
     logger = logging.getLogger(__name__)
     return logger
+
+
+def ensure_dir_exists(path):
+    """
+    Checks that a specified directory is present and has write permissions.
+    If it does not exist, attempts to create it.
+    """
+    try:
+        os.makedirs(path, exist_ok=True)
+    except PermissionError:
+        logger.error(f"Cannot create directory at {path}. Check permissions.")
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"Unexpected error while creating directory at {path}: {e}")
+        sys.exit(1)
 
 
 def main():
@@ -58,6 +73,9 @@ def main():
 
 
 if __name__ == "__main__":
+    ensure_dir_exists(settings.LOG_DIR)
+    ensure_dir_exists(settings.DATA_DIR)
+    ensure_dir_exists(settings.REPORT_DIR)
     logger = configure_logging()
     logger.debug("Logging configured")
     main()

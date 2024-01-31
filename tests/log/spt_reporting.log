@@ -1,0 +1,452 @@
+{"level": "DEBUG", "module": "spt_reporting", "message": "Logging configured"}
+{"level": "DEBUG", "module": "uiparser", "message": "uiname is MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "toplevel widget is MainWindow"}
+{"level": "DEBUG", "module": "properties", "message": "setting property geometry"}
+{"level": "DEBUG", "module": "properties", "message": "setting property windowTitle"}
+{"level": "DEBUG", "module": "properties", "message": "setting property windowIcon"}
+{"level": "DEBUG", "module": "uiparser", "message": "push MainWindow MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget centralwidget"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicMargins"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout_2"}
+{"level": "DEBUG", "module": "properties", "message": "setting property currentIndex"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QStackedWidget stackedWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Home"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout"}
+{"level": "DEBUG", "module": "properties", "message": "setting property minimumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QFrame frame"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizeConstraint"}
+{"level": "DEBUG", "module": "properties", "message": "setting property leftMargin"}
+{"level": "DEBUG", "module": "properties", "message": "setting property spacing"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicMargins"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicSpacing"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout controls"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton view_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton view_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fc113c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property icon"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton new_patient"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton new_patient"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fc113c9a170>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox patient_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox patient_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fc113c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizePolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton finnish_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton finnish_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fc113c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton start_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton start_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fc113c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizePolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton print_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton print_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fc113c9a170>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout controls"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QFrame frame"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a050>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property font"}
+{"level": "DEBUG", "module": "properties", "message": "setting property layoutDirection"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShape"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel header"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel header"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a050>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Home"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fc113c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget RecordResults"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget RecordResults"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fc113c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Save"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Save"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fc113c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Print"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Print"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fc113c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget StartTest"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout_3"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel histomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel histomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton start_test_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton start_test_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox protocol_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox protocol_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel protocol"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel protocol"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox last_antihistomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox last_antihistomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton set_time_now"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton set_time_now"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShape"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShadow"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizeAdjustPolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property showGrid"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sortingEnabled"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QTableWidget tableWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QTableWidget tableWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton pushButton"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton pushButton"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QDateTimeEdit dateTimeEdit"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QDateTimeEdit dateTimeEdit"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget StartTest"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fc113c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QStackedWidget stackedWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fc113c99ea0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout_2"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget centralwidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fc113c99d80>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QStatusBar statusbar"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QStatusBar statusbar"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fc113c99d80>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property geometry"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QMenuBar menuBar"}
+{"level": "DEBUG", "module": "properties", "message": "setting property title"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QMenu menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QMenu menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QMenuBar object at 0x7fc113c9b5b0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QMenuBar menuBar"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fc113c99d80>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget MainWindow MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget None"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionLoad_Data to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionSave_Data to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionReport_Format to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionDefaults to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionSettings to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionExit to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action menuFile to menuBar"}
+{"level": "INFO", "module": "stack_controller", "message": "Stack map created: {'Home': 0, 'RecordResults': 1, 'Save': 2, 'Print': 3, 'StartTest': 4}"}
+{"level": "DEBUG", "module": "spt_reporting", "message": "Logging configured"}
+{"level": "DEBUG", "module": "uiparser", "message": "uiname is MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "toplevel widget is MainWindow"}
+{"level": "DEBUG", "module": "properties", "message": "setting property geometry"}
+{"level": "DEBUG", "module": "properties", "message": "setting property windowTitle"}
+{"level": "DEBUG", "module": "properties", "message": "setting property windowIcon"}
+{"level": "DEBUG", "module": "uiparser", "message": "push MainWindow MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget centralwidget"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicMargins"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout_2"}
+{"level": "DEBUG", "module": "properties", "message": "setting property currentIndex"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QStackedWidget stackedWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Home"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout"}
+{"level": "DEBUG", "module": "properties", "message": "setting property minimumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QFrame frame"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizeConstraint"}
+{"level": "DEBUG", "module": "properties", "message": "setting property leftMargin"}
+{"level": "DEBUG", "module": "properties", "message": "setting property spacing"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicMargins"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicSpacing"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout controls"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton view_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton view_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fa534c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property icon"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton new_patient"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton new_patient"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fa534c9a170>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox patient_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox patient_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fa534c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizePolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton finnish_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton finnish_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fa534c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton start_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton start_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fa534c9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizePolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton print_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton print_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fa534c9a170>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout controls"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QFrame frame"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a050>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property font"}
+{"level": "DEBUG", "module": "properties", "message": "setting property layoutDirection"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShape"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel header"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel header"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a050>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Home"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fa534c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget RecordResults"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget RecordResults"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fa534c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Save"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Save"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fa534c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Print"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Print"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fa534c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget StartTest"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout_3"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel histomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel histomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton start_test_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton start_test_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox protocol_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox protocol_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel protocol"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel protocol"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox last_antihistomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox last_antihistomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton set_time_now"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton set_time_now"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShape"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShadow"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizeAdjustPolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property showGrid"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sortingEnabled"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QTableWidget tableWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QTableWidget tableWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton pushButton"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton pushButton"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QDateTimeEdit dateTimeEdit"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QDateTimeEdit dateTimeEdit"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget StartTest"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fa534c99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QStackedWidget stackedWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fa534c99ea0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout_2"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget centralwidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fa534c99d80>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QStatusBar statusbar"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QStatusBar statusbar"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fa534c99d80>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property geometry"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QMenuBar menuBar"}
+{"level": "DEBUG", "module": "properties", "message": "setting property title"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QMenu menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QMenu menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QMenuBar object at 0x7fa534c9b5b0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QMenuBar menuBar"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fa534c99d80>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget MainWindow MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget None"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionLoad_Data to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionSave_Data to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionReport_Format to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionDefaults to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionSettings to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionExit to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action menuFile to menuBar"}
+{"level": "INFO", "module": "stack_controller", "message": "Stack map created: {'Home': 0, 'RecordResults': 1, 'Save': 2, 'Print': 3, 'StartTest': 4}"}
+{"level": "DEBUG", "module": "main_controller", "message": "[]"}
+{"level": "DEBUG", "module": "spt_reporting", "message": "Logging configured"}
+{"level": "DEBUG", "module": "uiparser", "message": "uiname is MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "toplevel widget is MainWindow"}
+{"level": "DEBUG", "module": "properties", "message": "setting property geometry"}
+{"level": "DEBUG", "module": "properties", "message": "setting property windowTitle"}
+{"level": "DEBUG", "module": "properties", "message": "setting property windowIcon"}
+{"level": "DEBUG", "module": "uiparser", "message": "push MainWindow MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget centralwidget"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicMargins"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout_2"}
+{"level": "DEBUG", "module": "properties", "message": "setting property currentIndex"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QStackedWidget stackedWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Home"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout"}
+{"level": "DEBUG", "module": "properties", "message": "setting property minimumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QFrame frame"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizeConstraint"}
+{"level": "DEBUG", "module": "properties", "message": "setting property leftMargin"}
+{"level": "DEBUG", "module": "properties", "message": "setting property spacing"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicMargins"}
+{"level": "DEBUG", "module": "properties", "message": "setting property pyuicSpacing"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout controls"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton view_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton view_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fcf7dc9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property icon"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton new_patient"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton new_patient"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fcf7dc9a170>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox patient_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox patient_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fcf7dc9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizePolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton finnish_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton finnish_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fcf7dc9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton start_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton start_test"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fcf7dc9a170>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizePolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton print_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton print_report"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QFrame object at 0x7fcf7dc9a170>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout controls"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QFrame frame"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a050>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property font"}
+{"level": "DEBUG", "module": "properties", "message": "setting property layoutDirection"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShape"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel header"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel header"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a050>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Home"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fcf7dc99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget RecordResults"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget RecordResults"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fcf7dc99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Save"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Save"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fcf7dc99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget Print"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget Print"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fcf7dc99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QWidget StartTest"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QGridLayout gridLayout_3"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel histomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel histomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton start_test_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton start_test_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox protocol_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox protocol_selector"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property alignment"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QLabel protocol"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QLabel protocol"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QComboBox last_antihistomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QComboBox last_antihistomine"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton set_time_now"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton set_time_now"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property maximumSize"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShape"}
+{"level": "DEBUG", "module": "properties", "message": "setting property frameShadow"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sizeAdjustPolicy"}
+{"level": "DEBUG", "module": "properties", "message": "setting property showGrid"}
+{"level": "DEBUG", "module": "properties", "message": "setting property sortingEnabled"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QTableWidget tableWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QTableWidget tableWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QPushButton pushButton"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QPushButton pushButton"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QDateTimeEdit dateTimeEdit"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QDateTimeEdit dateTimeEdit"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc9a9e0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout_3"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget StartTest"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QStackedWidget object at 0x7fcf7dc99fc0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QStackedWidget stackedWidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QWidget object at 0x7fcf7dc99ea0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop layout QGridLayout gridLayout_2"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QWidget centralwidget"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fcf7dc99d80>"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QStatusBar statusbar"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QStatusBar statusbar"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fcf7dc99d80>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property geometry"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QMenuBar menuBar"}
+{"level": "DEBUG", "module": "properties", "message": "setting property title"}
+{"level": "DEBUG", "module": "uiparser", "message": "push QMenu menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QMenu menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <PyQt5.QtWidgets.QMenuBar object at 0x7fcf7dc9b5b0>"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget QMenuBar menuBar"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget <app.ui.main_controller.MainWindow object at 0x7fcf7dc99d80>"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "properties", "message": "setting property text"}
+{"level": "DEBUG", "module": "uiparser", "message": "pop widget MainWindow MainWindow"}
+{"level": "DEBUG", "module": "uiparser", "message": "new topwidget None"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionLoad_Data to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionSave_Data to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionReport_Format to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionDefaults to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionSettings to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action actionExit to menuFile"}
+{"level": "DEBUG", "module": "uiparser", "message": "add action menuFile to menuBar"}
+{"level": "INFO", "module": "stack_controller", "message": "Stack map created: {'Home': 0, 'RecordResults': 1, 'Save': 2, 'Print': 3, 'StartTest': 4}"}
+{"level": "DEBUG", "module": "main_controller", "message": "[]"}
