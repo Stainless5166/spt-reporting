@@ -6,7 +6,7 @@ from PyQt5 import QtWidgets, uic
 class SettingsDialog(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super(SettingsDialog, self).__init__(parent)
-        uic.loadUi('settings_dialog.ui', self)
+        uic.loadUi("settings_dialog.ui", self)
 
         self.settings_widgets = {}
         self.settings_file_path = "settings.json"
@@ -18,14 +18,14 @@ class SettingsDialog(QtWidgets.QDialog):
 
     def load_from_file(self):
         # Frozen or not
-        if getattr(sys, 'frozen', False):
+        if getattr(sys, "frozen", False):
             current_path = sys._MEIPASS
         else:
-            current_path = ''
+            current_path = ""
 
-        with open(current_path
-                  + self.settings_file_path,
-                  'r') as settings_file:
+        with open(
+            current_path + self.settings_file_path, "r"
+        ) as settings_file:
             settings = json.load(settings_file)
 
             # Iterate over all loaded settings
@@ -50,5 +50,5 @@ class SettingsDialog(QtWidgets.QDialog):
             value = line_edit.text()
             settings_to_save[key] = value
 
-        with open(self.settings_file_path, 'w') as settings_file:
+        with open(self.settings_file_path, "w") as settings_file:
             json.dump(settings_to_save, settings_file)

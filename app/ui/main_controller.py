@@ -6,10 +6,10 @@ from app.ui.stack_controller import StackController
 logger = logging.getLogger(__name__)
 
 
-class YourMainWindowClass(QtWidgets.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("app/ui/main.ui", self)
+        uic.loadUi("app/ui/main_controller.ui", self)
         self.setWindowTitle("SPT - Reporting")
         self.apply_actions_to_buttons()
         self.stack_controller = StackController(self.stackedWidget)

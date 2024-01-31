@@ -11,6 +11,7 @@ logger = logging.getLogger(__name__)
 
 # create and manage a new patient record
 
+
 def create_patient_id():
     """
     Create a new patient ID
@@ -40,11 +41,11 @@ class Patient:
         else:
             # try to load the person data from the file
             try:
-                with open(person_data_filename, 'r') as file:
+                with open(person_data_filename, "r") as file:
                     data = json.load(file)
                     # instantiate the Person class with the
                     # data from the file
-                    self.patient_id = data.get('patient_id')
+                    self.patient_id = data.get("patient_id")
                     self.person = Person(
                         name=data.name,
                         address=data.address,
@@ -54,8 +55,9 @@ class Patient:
                         insurance=data.insurance,
                     )
             except Exception as e:
-                raise ValueError('Unable to load data from the file. '
-                                 'Error: {}'.format(e))
+                raise ValueError(
+                    "Unable to load data from the file. " "Error: {}".format(e)
+                )
 
     def patient_json_export(self):
         """

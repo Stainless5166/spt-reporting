@@ -1,6 +1,7 @@
 import logging
-
 from PyQt5.QtWidgets import QStackedWidget
+
+logger = logging.getLogger(__name__)
 
 
 class StackController:
@@ -10,7 +11,7 @@ class StackController:
             for i in range(stacked_widget.count())
         }
         self._current_state = stacked_widget.currentIndex()
-        logging.info(f'Stack map created: {self._stack_map}')
+        logger.info(f"Stack map created: {self._stack_map}")
 
     @property
     def current_state(self):

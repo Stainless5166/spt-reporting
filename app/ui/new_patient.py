@@ -2,8 +2,7 @@ import json
 
 from PyQt5 import QtWidgets, uic
 from app.patient import Patient, Person
-from PyQt5.QtWidgets import (QLineEdit, QSpinBox,
-                             QCheckBox, QMessageBox)
+from PyQt5.QtWidgets import QLineEdit, QSpinBox, QCheckBox, QMessageBox
 from typing import Any, Dict
 from pydantic import BaseModel, ValidationError
 import typing
@@ -13,18 +12,18 @@ def get_widget_mapping(model: BaseModel) -> Dict[str, Any]:
     widget_mapping = {}
 
     for field_name, field_value in model.__annotations__.items():
-        if (field_value == str or
-                field_value == typing.Optional[str]):
+        if field_value == str or field_value == typing.Optional[str]:
             widget = QLineEdit()
-        elif (field_value == int or
-              field_value == typing.Optional[int]):
+        elif field_value == int or field_value == typing.Optional[int]:
             widget = QSpinBox()
-        elif (field_value == bool or
-              field_value == typing.Optional[bool]):
+        elif field_value == bool or field_value == typing.Optional[bool]:
             widget = QCheckBox()
         else:
-            raise ValueError(f"Unsupported field type "
-                             f"{field_value} for field {field_name}")
+            raise ValueError(
+                f"Unsupported field type "
+                f"{field_value} "
+                f"for field {field_name}"
+            )
 
         widget_mapping[field_name] = widget
 
@@ -33,16 +32,16 @@ def get_widget_mapping(model: BaseModel) -> Dict[str, Any]:
 
 class NewPatient(QtWidgets.QDialog):
     """
-        This is the controller for the new patient dialog.
+    This is the controller for the new patient dialog.
 
-        This class is expected to load the following widgets
-        from the corresponding .ui file:
-        - back_button: QPushButton that triggers closing of the dialog
-        - save_button: QPushButton that triggers saving the data
-        entered in the form
-        - field_list: QFormLayout that contains the fields
-        for creating a new patient
-        """
+    This class is expected to load the following widgets
+    from the corresponding .ui file:
+    - back_button: QPushButton that triggers closing of the dialog
+    - save_button: QPushButton that triggers saving the data
+    entered in the form
+    - field_list: QFormLayout that contains the fields
+    for creating a new patient
+    """
 
     def __init__(self, *args, **kwargs):
         """
@@ -59,10 +58,9 @@ class NewPatient(QtWidgets.QDialog):
 
         self.person_fields = get_widget_mapping(Person())
         for field_name, widget in self.person_fields.items():
-            callback = (
-                self.make_editing_finished_callback(field_name,
-                                                    self.patient.person,
-                                                    widget))
+            callback = self.make_editing_finished_callback(
+                field_name, self.patient.person, widget
+            )
             widget.editingFinished.connect(callback)
             self.field_list.addRow(field_name, widget)
 
@@ -78,9 +76,9 @@ class NewPatient(QtWidgets.QDialog):
 
     ...
 
-    def make_editing_finished_callback(self, field_name: str,
-                                       model: Person,
-                                       widget: QtWidgets.QWidget):
+    def make_editing_finished_callback(
+        self, field_name: str, model: Person, widget: QtWidgets.QWidget
+    ):
         def callback():
             # read the text from the widget
             value = widget.text()

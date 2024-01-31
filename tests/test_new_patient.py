@@ -1,11 +1,14 @@
 import pytest
+import logging
 from PyQt5.QtWidgets import QApplication
 from unittest.mock import patch
 from app.ui.new_patient import NewPatient
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope="session", autouse=True)
 def app_context():
+    logger = logging.getLogger()
+    logger.info("Starting application context")
     app = QApplication([])
     yield app
     app.quit()
@@ -26,6 +29,7 @@ def new_patient():
 def test_new_patient_save_button(new_patient):
     # assert if the save button is enabled
     assert new_patient.save_button.isEnabled()
+    logging.debug("Save button is enabled")
 
 
 def test_new_patient_back_button(new_patient):
@@ -33,10 +37,9 @@ def test_new_patient_back_button(new_patient):
     assert new_patient.back_button.isEnabled()
 
 
-@patch('app.ui.new_patient.QMessageBox')
+@patch("app.ui.new_patient.QMessageBox")
 def test_is_valid_without_error(mock_msg_box, new_patient):
     # trigger the method
     new_patient.save_button_clicked()
-
     # check if QMessageBox.about was called indicating no validation error
     mock_msg_box.about.assert_not_called()

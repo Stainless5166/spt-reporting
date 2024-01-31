@@ -13,8 +13,10 @@ AppImage:
 script:
   - rm -rf AppDir  | true
   - mkdir -p AppDir/usr/src
-  - cp app/main.py  AppDir/usr/src -r
+  - cp spt_reporting.py  AppDir/usr/src -r
   - mkdir -p AppDir/usr/share/icons  # Added: Create a directory for the icons inside AppDir.
   - cp app/resources/icons/appicon.png AppDir/usr/share/icons # Added: Copy the icon into the newly created directory.
-  - python3 -m pip install  --ignore-installed --prefix=/usr --root=AppDir -r ./requirements.txt
-  - pyinstaller --onefile --name=main --distpath=AppDir/usr/bin app/main.py
+  - cd AppDir
+  - poetry install --no-dev  # Poetry handles dependencies. We use --no-dev to exclude development-only packages.
+  - cd -
+  - pyinstaller --onefile --name=main --distpath=AppDir/usr/bin spt_reporting.py  # Build the executable.

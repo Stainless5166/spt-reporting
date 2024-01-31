@@ -23,7 +23,7 @@ def safe_file_write(path, data):
 
     # Try to open the file in write mode, creating it if it doesn't exist
     try:
-        with open(path, 'w') as file:
+        with open(path, "w") as file:
             file.write(data)
     except IOError as e:
         # Handle expected IO errors
@@ -34,6 +34,7 @@ def safe_file_write(path, data):
         # Handle any other unexpected errors
         logger.error(f"An unexpected error occurred: {e}")
         raise
+
 
 # Example usage
 # path = 'path/to/your/file.txt'
