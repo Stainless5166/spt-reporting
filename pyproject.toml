@@ -1,83 +1,43 @@
-# ==== Build system ====
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-# ==== Dependencies ====
-[tool.poetry.dependencies]
-# Specify the python version
-python = "3.11.6"
-# Packages for the UI
-# Packages for testing
-pytest = "*"
-pytest-qt = "*"
-pytest-flake8 = "*"
-# For packaging the application
-pyinstaller = "*"
-# Git hooks
-pre-commit = "*"
-# Code Quality tools
-flake8 = "*"
-# For building AppImage Linux packages
-appimage-builder = "*"
-# Templating
-jinja2 = "*"
-# For generating pdfs
-weasyprint = "*"
-# Dynamic layered configurations
-dynaconf = "*"
-# Data validation
-pydantic = "*"
-# Code Formatter
-black = "*"
-
-# ==== Flake8 Configuration ====
-pyqt5-qt5 = "5.15.2"
-automat = "^22.10.0"
-[flake8.settings]
-ignore = "E203, E266, E501, W503"
-max-line-length = 98
-max-complexity = 18
-
+requires = ["poetry-core>=1.0.0"]
 
 [tool.black]
-line-length = 75
+line-length = 120
 
-# ==== PyTest Configuration ====
-[pytest.ini_options]
-addopts = "--doctest-modules"
+[tool.flake8]
+ignore = "E203, E266, E501, W503"
+max-complexity = 15
+max-line-length = 120
 
-# ==== Your Poetry Package ====
 [tool.poetry]
+authors = ["William Hogg <wfhogg53@outlook.com>"]
+description = "A simple UI to produce Skin Prick Test reports"
 name = "spt-reporting"
 version = "0.1.0"
-description = "A simple UI to produce Skin Prick Test reports"
-authors = ["William Hogg <wfhogg53@outlook.com>"]
 
-# ==== Pre-Commit Hooks Configuration ====
-[tool.pre-commit]
-[[tool.pre-commit.repos]]
-repo = "https://github.com/ambv/black"
-rev = "stable"
-[[tool.pre-commit.repos.hooks]]
-id = "black"
-[[tool.pre-commit.repos]]
-repo = "https://gitlab.com/pycqa/flake8"
-rev = "master"
-[[tool.pre-commit.repos.hooks]]
-id = "flake8"
-[[tool.pre-commit.repos]]
-repo = "https://github.com/pre-commit/pre-commit-hooks"
-rev = "v4.5.0"
-[[tool.pre-commit.repos.hooks]]
-id = "check-yaml"
-[[tool.pre-commit.repos.hooks]]
-id = "trailing-whitespace"
-[[tool.pre-commit.repos]]
-repo = "local"
-[[tool.pre-commit.repos.hooks]]
-id = "flake8"
-name = "flake8"
-entry = "flake8"
-language = "python"
-types = ["python"]
+[tool.poetry.dependencies]
+appimage-builder = "*"
+automat = "^22.10.0"
+black = "*"
+dynaconf = "*"
+flake8 = "*"
+jinja2 = "*"
+pre-commit = "*"
+pydantic = "*"
+pyinstaller = "*"
+pyqt5-qt5 = "5.15.2"
+pytest = "*"
+pytest-flake8 = "*"
+pytest-qt = "*"
+python = "3.11.6"
+validate-pyproject = "^0.16"
+weasyprint = "*"
+pyqt5 = "^5.15.10"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+testpaths = [
+    "tests"
+]
+plugins = ["qt-4.3.1", "flake8-1.0.7"]
