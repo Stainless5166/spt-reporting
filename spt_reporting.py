@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Main entry point for the Skin Prick Test Reporting application.
+"""
+
 import os
 import sys
 import json

@@ -92,3 +92,5 @@ test_report.txt
 
 # Ignore dynaconf secret files
 .secrets.*
+!/tests/data/
+!/tests/log/

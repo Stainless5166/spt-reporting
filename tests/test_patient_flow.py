@@ -33,13 +33,13 @@ class TestNewPatientForm:
 
     def test_patient_json_export(self, patient):
         """
-        Test case for patient_json_export method
+        Test case for json_export method
         test creation of file, that file does not already exist,
         and that file is json
         and that the json export matches the patient object that is exported.
         """
 
-        good_path = settings.DATA_DIR + "/" + patient.patient_id
+        good_path = settings.DATA_DIR + "/" + str(patient.patient_id) + ".json"
         logger.debug(good_path)
 
         # check to see if file exists and remove it if it does
@@ -48,7 +48,7 @@ class TestNewPatientForm:
         assert os.path.exists(good_path) is False
 
         # export patient data as json
-        patient.patient_json_export()
+        patient.json_export()
 
         # check that the file exists
         assert os.path.exists(good_path) is True

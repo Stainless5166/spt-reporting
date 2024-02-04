@@ -5,6 +5,7 @@ from typing import Optional
 from dynaconf import settings
 from app.safe_write import safe_file_write
 import logging
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -20,12 +21,12 @@ def create_patient_id():
 
 
 class Person(BaseModel):
-    name: Optional[str] = None
-    address: Optional[str] = None
-    dob: Optional[str] = None
-    email: Optional[str] = None
-    phone: Optional[str] = None
-    insurance: Optional[str] = None
+    name: Optional[str] = ""
+    address: Optional[str] = ""
+    dob: Optional[str] = ""
+    email: Optional[str] = ""
+    phone: Optional[str] = ""
+    insurance: Optional[str] = ""
 
 
 class Patient:
@@ -39,30 +40,36 @@ class Patient:
             self.patient_id = create_patient_id()
             self.person = Person()
         else:
+            # check if the file exists in the data directory
+            path = Path(settings.DATA_DIR, person_data_filename)
+            if not path.exists():
+                raise ValueError("File does not exist in the data directory")
             # try to load the person data from the file
             try:
-                with open(person_data_filename, "r") as file:
+                with path.open("r") as file:
                     data = json.load(file)
                     # instantiate the Person class with the
                     # data from the file
                     self.patient_id = data.get("patient_id")
-                    self.person = Person(
-                        name=data.name,
-                        address=data.address,
-                        dob=data.dob,
-                        email=data.email,
-                        phone=data.phone,
-                        insurance=data.insurance,
+                    self.person = Person.parse_obj(
+                        {
+                            "name": data.get("name"),
+                            "address": data.get("address"),
+                            "dob": data.get("dob"),
+                            "email": data.get("email"),
+                            "phone": data.get("phone"),
+                            "insurance": data.get("insurance"),
+                        }
                     )
             except Exception as e:
                 raise ValueError("Unable to load data from the file. " "Error: {}".format(e))
 
-    def patient_json_export(self):
+    def json_export(self):
         """
         Export patient data as json
         """
         data_dir = settings.DATA_DIR
-        file_name = self.patient_id
+        file_name = str(self.patient_id) + ".json"
         file_path = data_dir + "/" + file_name
         logger.debug(file_path)
         try:
