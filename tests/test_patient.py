@@ -1,8 +1,24 @@
+import os
+import pytest
 from pathlib import Path
 from app.patient import Patient
 from dynaconf import settings
 
 # Your module and actual values can be different. Please replace accordingly.
+
+
+@pytest.fixture
+def setup_patient():
+    p1 = Patient()
+    p1.patient_id = "patient_id"
+    p1.json_export()  # Be sure to use the correct method name here
+    yield p1
+
+    # Deleting the file after test
+    file_name = str(p1.patient_id) + ".json"
+    file_path = Path(settings.DATA_DIR, file_name)
+    if file_path.exists():
+        os.remove(file_path)
 
 
 def test_patient_creation():
@@ -21,12 +37,6 @@ def test_patient_save():
     assert default_file_path.exists(), f"File {default_file_path} does not exist"
 
 
-def test_patient_load():
-    # Here we're assuming that 'test_patient_save' has already created a patient file.
-    # Ideally, 'load' tests should not depend on 'save' tests.
-    # Replace 'patient_id.json' with a valid test patient file.
-    p1 = Patient()
-    p1.patient_id = "patient_id"
-    p1.json_export()
+def test_patient_load(setup_patient):
     p2 = Patient("patient_id.json")
     assert isinstance(p2, Patient), "Object is not an instance of Patient class"

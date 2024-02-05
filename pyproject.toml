@@ -34,6 +34,7 @@ python = "3.11.6"
 validate-pyproject = "^0.16"
 weasyprint = "^60.2"
 pyqt5 = "^5.15.10"
+coverage = "^7.4.1"
 
 [tool.pytest.ini_options]
 addopts = "--doctest-modules"

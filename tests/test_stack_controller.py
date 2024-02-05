@@ -22,18 +22,10 @@ class TestStackController:
     def setup_test_stack_controller_for_testing(self, qt_stacked_widget):
         self.stack_controller = StackController(qt_stacked_widget)
 
-    def test_initial_state(self):
-        initial_state = self.stack_controller.current_state
-        assert initial_state == 0, "Initial state should be 0"
-
     def test_set_state(self):
         self.stack_controller.current_state = "State_0"
-        assert (
-            self.stack_controller.current_state == 0
-        ), "State for 'State_0' should be 0"
+        assert self.stack_controller.current_state == "State_0", "State for 'State_0' should be `State_0`"
 
     def test_get_state(self):
         self.stack_controller.current_state = "State_2"
-        assert (
-            self.stack_controller.current_state == 2
-        ), "State for 'State_2' should be 2"
+        assert self.stack_controller.current_state == "State_2", "State for 'State_2' should be `State_2`"

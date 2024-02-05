@@ -16,21 +16,21 @@
    </item>
    <item>
     <layout class="QHBoxLayout">
-      <item>
-       <widget class="QPushButton" name="save_button">
-        <property name="text">
-         <string>Save Patient</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="back_button">
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <item>
+      <widget class="QPushButton" name="back_button">
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="save_button">
+       <property name="text">
+        <string>Save Patient</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

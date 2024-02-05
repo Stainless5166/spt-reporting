@@ -1,0 +1,1 @@
+stack controller manages the navigation of a user through a stacked widget ui. The ui has three states [ "p_main", "p_new_test", "p_record_results"]. i need methods to set the state to each of these states.

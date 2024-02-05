@@ -21,11 +21,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def start_program(self):
         self.show()
-        self.stack_controller.current_state = "Home"
-        # Following line is used to mimic the functionality of
-        # `self.stackedWidget.setCurrentIndex(stack_map[stack])` statement
-        # from the previous `stack_controller` method.
-        self.stackedWidget.setCurrentIndex(self.stack_controller.current_state)
         return True
 
     def apply_actions_to_buttons(self):
@@ -48,4 +43,7 @@ class MainWindow(QtWidgets.QMainWindow):
         filenames = os.listdir(settings.DATA_DIR)
         for file in filenames:
             self.patients.append(Patient(file))
-        logger.debug(self.patients)
+        # then populate the patient selector with the list of patients names
+        self.patient_selector.clear()
+        for patient in self.patients:
+            self.patient_selector.addItem(patient.person.name)
